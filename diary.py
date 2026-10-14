@@ -12,7 +12,17 @@ diary = [
     },
 ]
 
+def entries_with_word(diary, word):
+    """Знаходить записи, які містять задане слово."""
+    found_entries = []
 
+    for entry in diary:
+        if word.lower() in entry["text"].lower():
+            found_entries.append(entry)
+
+    return found_entries
+
+    
 def print_diary(diary):
     """Виводить усі записи щоденника."""
     print("\n=== Щоденник мандрівника ===")
